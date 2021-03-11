@@ -1,6 +1,11 @@
+.todos {
+	font-size: 24px;
+}
+
 .todo {
 	display: flex;
-	font-size: 24px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .content {
