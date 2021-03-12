@@ -29,4 +29,11 @@ export class TodosComponent implements OnInit {
 		]
 	}
 
+	toggleDone(id:number):void {
+		this.todos.map((todo, idx) => {
+			if(id === idx) {
+				todo.completed = !todo.completed;
+			}
+		})
+	}
 }
