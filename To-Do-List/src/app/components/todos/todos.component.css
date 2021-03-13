@@ -13,6 +13,10 @@
 	margin-right: 25px;
 }
 
+.todo-input {
+	
+}
+
 .done {
 	text-decoration: line-through;
 }

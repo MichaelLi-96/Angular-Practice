@@ -11,6 +11,7 @@ export class TodosComponent implements OnInit {
 	constructor() { }
 
 	todos : Todo [] = [];
+	inputTodo:string = "";
 
 	ngOnInit(): void {
 		this.todos = [
@@ -41,5 +42,16 @@ export class TodosComponent implements OnInit {
 		this.todos = this.todos.filter((todo, idx) => {
 			return id !== idx;
 		})
+	}
+
+	addTodo():void {
+		if(this.inputTodo === "") {
+			return;
+		}
+		this.todos.push({
+			content: this.inputTodo,
+			completed: false
+		});
+		this.inputTodo = "";
 	}
 }
