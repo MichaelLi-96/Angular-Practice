@@ -17,7 +17,7 @@ export class BoardComponent implements OnInit {
   }
 
   newGame() {
-  	this.squares = Array(9).fill(null);
+  	this.squares = Array(9).fill("1");
   	this.playerOnesTurn = true;
   }
 
