@@ -1,8 +1,10 @@
-<p>board works!</p>
+<div id="title">Tic-Tac-Toe</div>
+<div id="turnDisplay">{{playerOnesTurn ? "Player One's Turn" : "Player Two's Turn" }}</div>
 <div id="board">
 	<app-square
 		*ngFor="let squareVal of squares; let i = index"
 		[value]="squareVal"
+		(click)="handleClick(i)"
 	>	
 	</app-square>
 </div>

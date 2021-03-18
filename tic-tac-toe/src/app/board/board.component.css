@@ -1,3 +1,16 @@
+#title {
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	margin: 25px 0px 25px 0px;
+}
+
+#turnDisplay {
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 26px;
+}
+
 #board {
 	display: flex;
 	flex-direction: row;
@@ -5,3 +18,4 @@
 	height: auto;
 	flex-wrap: wrap;
 }
+

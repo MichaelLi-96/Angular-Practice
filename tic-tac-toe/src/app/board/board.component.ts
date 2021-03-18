@@ -17,11 +17,24 @@ export class BoardComponent implements OnInit {
   }
 
   newGame() {
-  	this.squares = Array(9).fill("1");
+  	this.squares = Array(9).fill("");
   	this.playerOnesTurn = true;
   }
 
   getPlayer() {
   	return this.playerOnesTurn ? 'X' : 'O';
+  }
+
+  handleClick(index:number) {
+  	if(this.squares[index] !== "") {
+  		return;
+  	}
+  	if(this.playerOnesTurn) {
+  		this.squares[index] = 'X';
+  	}
+  	else {
+  		this.squares[index] = 'O';
+  	}
+  	this.playerOnesTurn = !this.playerOnesTurn;
   }
 }

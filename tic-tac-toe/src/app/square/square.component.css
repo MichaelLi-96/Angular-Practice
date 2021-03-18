@@ -3,7 +3,6 @@
 	width: 200px;
 	background-color: Gray;
 	border: solid 1px black;
-	transition: 0.2s;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -13,4 +12,5 @@
 
 .square:hover {
 	background-color: LightGray;
+	cursor: pointer;
 }
