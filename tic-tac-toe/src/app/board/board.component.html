@@ -1,10 +1,11 @@
 <div id="title">Tic-Tac-Toe</div>
 <div id="turnDisplay">{{playerOnesTurn ? "Player One's Turn" : "Player Two's Turn" }}</div>
+<button id="restartButton" (click)="handleRestartGame()">Restart Game</button>
 <div id="board">
 	<app-square
 		*ngFor="let squareVal of squares; let i = index"
 		[value]="squareVal"
-		(click)="handleClick(i)"
+		(click)="handlePlayerMove(i)"
 	>	
 	</app-square>
 </div>

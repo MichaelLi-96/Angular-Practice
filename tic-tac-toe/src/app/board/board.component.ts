@@ -13,19 +13,14 @@ export class BoardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  	this.newGame();
-  }
-
-  newGame() {
-  	this.squares = Array(9).fill("");
-  	this.playerOnesTurn = true;
+  	this.handleRestartGame();
   }
 
   getPlayer() {
   	return this.playerOnesTurn ? 'X' : 'O';
   }
 
-  handleClick(index:number) {
+  handlePlayerMove(index:number):void {
   	if(this.squares[index] !== "") {
   		return;
   	}
@@ -36,5 +31,10 @@ export class BoardComponent implements OnInit {
   		this.squares[index] = 'O';
   	}
   	this.playerOnesTurn = !this.playerOnesTurn;
+  }
+
+  handleRestartGame():void {
+  	this.squares = Array(9).fill("");
+  	this.playerOnesTurn = true;
   }
 }
