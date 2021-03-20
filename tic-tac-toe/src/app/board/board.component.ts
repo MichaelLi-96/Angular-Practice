@@ -40,6 +40,7 @@ export class BoardComponent implements OnInit {
   	this.squares = Array(9).fill("");
   	this.playerOnesTurn = true;
   	this.winner = "";
+  	this.gameover = false;
   }
 
   checkWinner(): void {
@@ -56,8 +57,8 @@ export class BoardComponent implements OnInit {
 
   	for(let winningMove of winningMoves) {
   		let board = this.squares;
-  		if(board[winningMove[0]] === board[winningMove[1]] && board[winningMove[1]] === board[winningMove[2]]) {
-  			this.winner =this.playerOnesTurn ? "Player one wins" : "Player two wins";
+  		if((board[winningMove[0]] !== "" && board[winningMove[1]] !== "" && board[winningMove[2]] !== "") && (board[winningMove[0]] === board[winningMove[1]] && board[winningMove[1]] === board[winningMove[2]])) {
+  			this.winner =this.playerOnesTurn ? "Player one wins!" : "Player two wins!";
   			this.gameover = true;
   		}
   	}

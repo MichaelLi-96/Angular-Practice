@@ -1,6 +1,5 @@
 <div id="title">Tic-Tac-Toe</div>
-<div id="turnDisplay">{{playerOnesTurn ? "Player One's Turn" : "Player Two's Turn" }}</div>
-<div id="victoryMessage">{{winner}}</div>
+<div id="turnDisplay">{{winner === "" ? playerOnesTurn ? "Player One's Turn" : "Player Two's Turn" : winner}}</div>
 <button id="restartButton" (click)="handleRestartGame()">Restart Game</button>
 <div id="board">
 	<app-square
