@@ -9,6 +9,7 @@ export class BoardComponent implements OnInit {
 
 	squares:any[] = [];
 	playerOnesTurn:boolean = true;  
+	winner:string = "";
 
   constructor() { }
 
@@ -36,5 +37,6 @@ export class BoardComponent implements OnInit {
   handleRestartGame():void {
   	this.squares = Array(9).fill("");
   	this.playerOnesTurn = true;
+  	this.winner = "";
   }
 }
