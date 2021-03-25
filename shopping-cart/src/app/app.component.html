@@ -3,6 +3,11 @@
   <div id="content">
     <div id="Products">
       <div class="subtitle">Products</div>
+      <div *ngFor="let product of products; let i = index;">
+      	<div>{{i}}</div>
+      	<div>{{product.name}}</div>
+      	<div>{{product.price}}</div>
+      </div>
     </div>
     <div id="cart">
       <div class="subtitle">Cart</div>

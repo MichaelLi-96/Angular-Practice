@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shopping-cart';
+  products: Product[] = [
+  	{
+		name: 'Apple',
+		price: 1.50
+	},
+	{
+		name: 'Banana',
+		price: 2.00
+	},
+	{
+		name: 'Orange',
+		price: 0.50
+	}
+  ];
 }
