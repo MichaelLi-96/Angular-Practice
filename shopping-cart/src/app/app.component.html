@@ -1,12 +1,10 @@
 <div id="app">
   <div id="title">Shopping Cart</div>
   <div id="content">
-    <div id="Products">
+    <div id="products">
       <div class="subtitle">Products</div>
-      <div *ngFor="let product of products; let i = index;">
-      	<div>{{i}}</div>
-      	<div>{{product.name}}</div>
-      	<div>{{product.price}}</div>
+      <div id="productsContainer" *ngFor="let product of products; let i = index;">
+      	<app-product class="appProduct" [index]="i" [name]="product.name" [price]="product.price"></app-product>
       </div>
     </div>
     <div id="cart">
