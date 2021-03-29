@@ -21,4 +21,19 @@ export class AppComponent {
 		price: 0.50
 	}
   ];
+
+  cart: Product[] = [	{
+		name: 'Orange',
+		price: 0.50
+	}];
+
+  addToCart(product: Product): void {
+  	this.cart.push(product);
+  }
+
+  onRemoveFromCart(index: number): void {
+  	this.cart = this.cart.filter((product, idx) => {
+  		return idx !== index;
+  	})
+  }
 }
