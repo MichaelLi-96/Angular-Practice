@@ -27,7 +27,7 @@ export class AppComponent {
 		price: 0.50
 	}];
 
-  addToCart(product: Product): void {
+  onAddToCart(product: Product): void {
   	this.cart.push(product);
   }
 

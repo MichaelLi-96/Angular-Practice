@@ -4,13 +4,13 @@
     <div id="products">
       <div class="subtitle">Products</div>
       <div class="productsContainer" *ngFor="let product of products; let i = index;">
-      	<app-product class="appProduct" [index]="i" [name]="product.name" [price]="product.price" [isInCart]="false"></app-product>
+      	<app-product class="appProduct" [product]="product" [index]="i" [name]="product.name" [price]="product.price" [isInCart]="false" (added)="onAddToCart($event)"></app-product>
       </div>
     </div>
     <div id="cart">
       <div class="subtitle">Cart</div>
       <div class="productsContainer" *ngFor="let product of cart; let i = index;">
-      	<app-product class="appProduct" [index]="i" [name]="product.name" [price]="product.price" [isInCart]="true" (removed)="onRemoveFromCart($event)"></app-product>
+      	<app-product class="appProduct" [product]="product" [index]="i" [name]="product.name" [price]="product.price" [isInCart]="true" (removed)="onRemoveFromCart($event)"></app-product>
       </div>
     </div>
   </div>
