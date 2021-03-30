@@ -1,6 +1,6 @@
 <div class="product">
 	<div>{{index}}</div>
 	<div>{{name}}</div>
-	<div>${{price}}</div>
+	<div>$ {{price}}</div>
 	<Button (click)="isInCart ? removeFromCart(index) : addToCart(product)">{{isInCart ? "Remove from Cart" : "Add to Cart"}}</Button>
 </div>

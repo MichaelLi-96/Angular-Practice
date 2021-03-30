@@ -9,6 +9,7 @@
     </div>
     <div id="cart">
       <div class="subtitle">Cart</div>
+      <div>Total price: $ {{totalPrice}}</div>
       <div class="productsContainer" *ngFor="let product of cart; let i = index;">
       	<app-product class="appProduct" [product]="product" [index]="i" [name]="product.name" [price]="product.price" [isInCart]="true" (removed)="onRemoveFromCart($event)"></app-product>
       </div>

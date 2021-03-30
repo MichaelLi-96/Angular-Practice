@@ -22,16 +22,16 @@ export class AppComponent {
 	}
   ];
 
-  cart: Product[] = [	{
-		name: 'Orange',
-		price: 0.50
-	}];
+  cart: Product[] = [];
+  totalPrice: number = 0;
 
   onAddToCart(product: Product): void {
   	this.cart.push(product);
+  	this.totalPrice += product.price;
   }
 
   onRemoveFromCart(index: number): void {
+  	this.totalPrice -= this.cart[index].price;
   	this.cart = this.cart.filter((product, idx) => {
   		return idx !== index;
   	})
